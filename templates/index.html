@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Data Visualization</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tourism GAGA</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
+     
 
   <!-- Leaflet CSS & JS -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -20,14 +26,62 @@
 </head>
 
 <body>
-    <h1>Hey Test</h1>
-    <!-- {{data}} -->
-  <!-- The div where we will inject our map -->
-  <div id="map"></div>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>Tourism GAGA</h1>
+            <p>Where Tourism Meets the World!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="well">
+              <h5>Select a Country</h5>
+              <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Country Info</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
+          </div>
+          <!-- Div for Map-->
+          <div class="col-md-5">
+            <div id="mapbox"></div>
+          </div>
+          <!-- Div for Line chart-->
+          <div class="col-md-5">
+            <div id="Line"></div>
+          </div>
+          <!-- Div for Bar Graph-->
+          <div class="col-md-5">
+              <div id="Line"></div>
+          </div>
+         <!-- Div for Bubble Chart--> 
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="bubble"></div>
+          </div>
+        </div>
+      </div>
+  
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="./static/js/app.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
 
   <!-- API key -->
   <!-- <script type="text/javascript" src="config.js"></script> -->
   <!-- Our JS -->
   <!-- <script type="text/javascript" src="logic.js"></script> -->
+
 </body>
+
+
 </html>
