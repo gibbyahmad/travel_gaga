@@ -8,16 +8,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tourism GAGA</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src="{{ url_for('static', filename='./static/js/logic_dropdown.js') }}"></script> -->
       
   <!-- Our CSS -->
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -45,16 +43,6 @@
         </div>
       </div>
   </div>
-        <!-- Div for Bar Graph-->
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <div id="Bar"></div></div><br/>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="Bar2"></div> -->
-
 
           <!-- Bar Graph -->
   <div class="container">
@@ -70,23 +58,14 @@
         </div>
       </div>
 
-<!-- Work in Progress -->
-
-      <!-- GM-1 Graph -->
+      <!-- bubble comparison js file Graph -->
       <div class="row">
         <div class="col-md-12">
           <div id="myDiv"></div>
         </div>
       </div>
 
-      <!-- AS-1 Graph -->
-      <div class="row">
-        <div class="col-md-12">
-          <div id="tourplot"></div>
-        </div>
-      </div>
-
-      <!-- GM-2 Graph -->
+      <!-- world_tour JS file Graph -->
       <div class="row">
         <div class="col-md-12">
           <div id="myplot"></div>
@@ -96,9 +75,7 @@
 
   <script src="plotly.js"></script>
   <script src="app.js"></script>
-  <script src="graphd3.js"></script>
-  <script src="line_comparison.js"></script>
-  <script src="country_tour.js"></script>
+  <script src="bubble_comparison.js"></script>
   <script src="world_tour.js"></script>
 
 

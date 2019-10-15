@@ -3,7 +3,6 @@
 d3.json("country_tour.json").then((importedData) => {
     // console.log(importedData);
     var data = importedData;
-    console.log(data);
   
     // Sort the data array using the arrivals_avg value
     data.sort(function(a, b) {
@@ -18,28 +17,28 @@ d3.json("country_tour.json").then((importedData) => {
   
     // Trace1 for the Arrivals Data
     var trace1 = {
-      x: data.map(row => row.arrivals_avg),
+      x: data.map(row => row.country),
       y: data.map(row => row.In_avg_expense),
       text: data.map(row => row.country),
-      mode: 'markers+text',
+      mode: 'markers',
       textposition: 'top center',
       textfont: {
           family:'Raleway, sans-serif'},
-          marker: { size: 12 },
+          marker: { size: 15 },
       name: "Arrivals",
       type: "scatter",
       
     };
   
-    // Trace1 for the Arrivals Data
+    // Trace2 for the Departures Data
     var trace2 = {
-        x: data.map(row => row.departure_avg),
+        x: data.map(row => row.country),
         y: data.map(row => row.Out_avg_expense),
         text: data.map(row => row.country),
-        mode: 'markers+text',
+        mode: 'markers',
         textposition: 'top center',
         textfont: {
-            family:'Times New Roman'},
+            family:'Raleway, sans-serif'},
             marker: { size: 12 },
         name: "Departures",
         type: "scatter",
@@ -47,12 +46,11 @@ d3.json("country_tour.json").then((importedData) => {
       };
 
 
-    var data = [ trace1, trace2 ];
+    var data = [trace1,trace2];
     var layout = {
-        xaxis: {range: [ 10000, 80000 ],zeroline:false, title:"Number of Tourist in thousands"},
         yaxis: {range: [1000, 160000],zeroline:false, title:"Tourist Expenditures US$ million"},
         legend: {y: 0.5,  yref: 'paper',
-        font: {family: 'Arial, sans-serif', size: 20, color: 'black', } },
+        font: {family: 'Arial, sans-serif', size: 18, color: 'black', } },
         title:'Top 10 in Arrivals: Arrivals vs Departures'};
 
     // Render plotly
