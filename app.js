@@ -13,8 +13,8 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 // Define a markerSize function that will give each city a different radius based on its population
-function markerSize(population) {
-  return population / 40;
+function markerSize(arrivals) {
+  return arrivals / 200;
 }
 
 const myjson=[
@@ -2004,7 +2004,7 @@ const cities = myjson.map(jsonObj => {
   return {
     name: jsonObj.country,
     location: [jsonObj.latitude, jsonObj.longtitude],
-    population: jsonObj.arrivals_avg*100
+    arrivals: jsonObj.arrivals_avg*1000
   }
 })
 // // Each city object contains the city's name, location and population
@@ -2044,8 +2044,8 @@ for (var i = 0; i < cities.length; i++) {
     fillColor: "purple",
     // Setting our circle's radius equal to the output of our markerSize function
     // This will make our marker's size proportionate to its population
-    radius: markerSize(cities[i].population)
-  }).bindPopup("<h1>" + cities[i].name + "</h1> <hr> <h3>Population: " + cities[i].population + "</h3>").addTo(myMap);
+    radius: markerSize(cities[i].arrivals)
+  }).bindPopup("<h1>" + cities[i].name + "</h1> <hr> <h3>Arrivals: " + cities[i].arrivals + "</h3>").addTo(myMap);
 }
 
 });
